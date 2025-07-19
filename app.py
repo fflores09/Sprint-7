@@ -5,6 +5,9 @@ import plotly.graph_objects as go
 # Leer los datos del archivo CSV
 car_data = pd.read_csv('vehicles_us.csv')
 
+# Titulo
+st.header('Graficos para venta de coches')
+
 # Crear un botón en la aplicación Streamlit
 hist_button = st.button('Construir histograma')
 
