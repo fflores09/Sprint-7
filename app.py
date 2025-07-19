@@ -30,4 +30,13 @@ build_histogram = st.checkbox('Construir un histograma')
 
 if build_histogram:  # si la casilla de verificación está seleccionada
     st.write('Construir un histograma para la columna odómetro')
-    ...
+    # Crear un scatter plot utilizando plotly.graph_objects
+    # Se crea una figura vacía y luego se añade un rastro de scatter
+    fig = go.Figure(
+        data=[go.Scatter(x=car_data['odometer'], y=car_data['price'], mode='markers')])
+
+    # Opcional: Puedes añadir un título al gráfico si lo deseas
+    fig.update_layout(title_text='Relación entre Odómetro y Precio')
+
+    # Mostrar el gráfico Plotly
+    st.plotly_chart(fig, use_container_width=True)
