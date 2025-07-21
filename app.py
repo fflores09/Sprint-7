@@ -9,7 +9,7 @@ car_data = pd.read_csv('vehicles_us.csv')
 st.header('Graficos para venta de coches')
 
 # Crear un botón en la aplicación Streamlit
-hist_button = st.button('Construir histograma')
+hist_button = st.button('Construir histograma de odometro')
 
 # Lógica a ejecutar cuando se hace clic en el botón
 if hist_button:
@@ -29,7 +29,7 @@ if hist_button:
     st.plotly_chart(fig, use_container_width=True)
 
 # crear una casilla de verificación
-build_histogram = st.checkbox('Construir un histograma')
+build_histogram = st.checkbox('Construir un histograma del odometro y precio')
 
 if build_histogram:  # si la casilla de verificación está seleccionada
     st.write('Construir un histograma para la columna odómetro')
